@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.8
   introduction_screen: ^5.0.1
+  google_fonts: ^9.0.0
+  carousel_slider: ^5.1.2
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +57,9 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/files/quran/Suras/
+    - assets/files/hadeth/Hadeeth-20261027T142139Z-1-001/Hadeeth/
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
