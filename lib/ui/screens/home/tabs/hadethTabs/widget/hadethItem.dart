@@ -5,7 +5,6 @@ import 'package:testing_git/core/utilss/app_colors.dart';
 import 'package:testing_git/core/utilss/app_images.dart';
 import 'package:testing_git/model/hadeth.dart';
 import 'package:testing_git/ui/screens/home/common/main_loading_widget.dart';
-
 import '../../../../../../core/utilss/app_font_style.dart';
 import '../../../../../../core/utilss/app_size.dart';
 import '../hadethContent.dart';
