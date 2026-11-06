@@ -13,6 +13,13 @@ class Sebhatab extends StatefulWidget {
 class _SebhatabState extends State<Sebhatab>
     with SingleTickerProviderStateMixin {
   int count = 0;
+  final List<String> azkar = [
+    'سبحان الله',
+    'الحمد لله',
+    'الله أكبر',
+  ];
+
+  int zikrIndex = 0;
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -30,8 +37,14 @@ class _SebhatabState extends State<Sebhatab>
   }
   void _onSebhaTap() {
     setState(() {
-      count++;
+      if (count == 32) {
+        count = 0;
+        zikrIndex = (zikrIndex + 1) % azkar.length;
+      } else {
+        count++;
+      }
     });
+
     _controller.forward(from: 0);
   }
   @override
@@ -61,8 +74,10 @@ class _SebhatabState extends State<Sebhatab>
                   children: [
                     SizedBox(height: 130),
                     Center(
-                      child: Text('سبحان الله',
-                          style: AppFontStyle.bold24white.copyWith(fontSize: 35)),
+                      child: Text(
+                        azkar[zikrIndex],
+                        style: AppFontStyle.bold24white.copyWith(fontSize: 35),
+                      ),
                     ),
                     SizedBox(height: 15),
                     Text(
